@@ -107,14 +107,82 @@
 ##### 有符号数：先转为无符号数，取模(丢弃高k位，剩余低k位)，再转回有符号数
 ![有符号数截取.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638278426661-176cad8c-fe9d-4895-bba3-4f553a8b7e1f.png#clientId=u4fdbd714-cc9d-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u1c8152e1&margin=%5Bobject%20Object%5D&name=%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E6%88%AA%E5%8F%96.png&originHeight=620&originWidth=2244&originalType=binary&ratio=1&rotation=0&showTitle=false&size=463693&status=done&style=none&taskId=uf422a27e-06ce-4747-bd3e-29935fd3f70&title=)
 ## 整数运算
+### 加法
+#### 无符号数
+![无符号数加法.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638365562718-8b56f761-ef4d-498a-b6c7-69b534dee0f3.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u34141786&margin=%5Bobject%20Object%5D&name=%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%8A%A0%E6%B3%95.png&originHeight=716&originWidth=2066&originalType=binary&ratio=1&rotation=0&showTitle=false&size=249918&status=done&style=none&taskId=u267aac0e-236c-409e-bbd6-11eab5acdfb&title=)
+溢出：
+![Screen Shot 2021-12-01 at 21.34.42.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638365713982-3c861562-9729-45f3-801a-ad0c02ad3c22.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u7b13037a&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.34.42.png&originHeight=534&originWidth=1598&originalType=binary&ratio=1&rotation=0&showTitle=false&size=73433&status=done&style=none&taskId=u8a3333bb-5cc8-4634-b6c8-f744098c8d7&title=)
+​
+
+#### 有符号数
+![有符号数加法.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638365625338-952b1f58-9383-444a-bed5-cc5aae7cb9e6.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u20c3c2b6&margin=%5Bobject%20Object%5D&name=%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%8A%A0%E6%B3%95.png&originHeight=680&originWidth=2138&originalType=binary&ratio=1&rotation=0&showTitle=false&size=391832&status=done&style=none&taskId=uf361ae4e-a04d-4e41-8653-8ad48c802fe&title=)
+溢出：
+
+- 正溢出
+- 负溢出
+
+![Screen Shot 2021-12-01 at 21.35.04.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638365721126-2028ecef-64e7-4911-baa5-fc79fe9234f9.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u357616b5&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.35.04.png&originHeight=684&originWidth=1526&originalType=binary&ratio=1&rotation=0&showTitle=false&size=136036&status=done&style=none&taskId=u9ba9d20d-c1f6-44d5-858e-265fb615b14&title=)
 
 
+### 减法 - 加法逆元
+#### 无符号数
+![无符号数减法-加法逆元.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638365771082-8b96806f-c1a5-42de-8df4-d51f8c504afe.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u07465833&margin=%5Bobject%20Object%5D&name=%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%87%8F%E6%B3%95-%E5%8A%A0%E6%B3%95%E9%80%86%E5%85%83.png&originHeight=762&originWidth=2212&originalType=binary&ratio=1&rotation=0&showTitle=false&size=291703&status=done&style=none&taskId=ue0ef25e4-273b-4a1d-bf38-e3db402b224&title=)
+#### 有符号数
+![有符号数减法-加法逆元.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638365838003-277cd330-cd69-4099-8c0b-46f7ce996bf6.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uf5eaf268&margin=%5Bobject%20Object%5D&name=%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E5%87%8F%E6%B3%95-%E5%8A%A0%E6%B3%95%E9%80%86%E5%85%83.png&originHeight=932&originWidth=2052&originalType=binary&ratio=1&rotation=0&showTitle=false&size=362565&status=done&style=none&taskId=u781cbe0a-3774-4aee-a0a4-e358fe4d24e&title=)
+#### 有符号数非 `-x` 的位级表示
+
+- 对每一位求补，再对结果加1
+- 将位向量分为两部分，假设k是最右边的1的位置，对位k左边的所有位取反
+```json
+假设 x = 10100101, 则：
+
+方式1：
+-x = ~x + 1 = 01011010 + 00000001 = 01011011
+
+方式2:
+-x = 0101101 1
+```
 
 
+### 乘法
+#### 无符号数
+溢出截断，相当于取模 mod 2k
+![无符号数乘法截取.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638366091424-2a0cfa91-e8b1-499c-b4f4-3ee08fe1952d.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u2867e909&margin=%5Bobject%20Object%5D&name=%E6%97%A0%E7%AC%A6%E5%8F%B7%E6%95%B0%E4%B9%98%E6%B3%95%E6%88%AA%E5%8F%96.png&originHeight=892&originWidth=2136&originalType=binary&ratio=1&rotation=0&showTitle=false&size=304821&status=done&style=none&taskId=u16e7aa13-8f05-4f0c-a996-524476a4692&title=)
+#### 有符号数
+转换成无符号数 -> 截断取模 -> 转换成有符号数
+![有符号数乘法截取.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638366184537-b7b11796-48fe-41a0-8b1b-d966cd529fdb.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u9d999e2f&margin=%5Bobject%20Object%5D&name=%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0%E4%B9%98%E6%B3%95%E6%88%AA%E5%8F%96.png&originHeight=934&originWidth=2230&originalType=binary&ratio=1&rotation=0&showTitle=false&size=338122&status=done&style=none&taskId=u2c70951b-0cf1-4005-8c24-dff6fd6a664&title=)
+#### 用左移和加减法运算的组合来代替乘以常量因子的乘法
+
+- 原因：乘法运算所需的时钟周期大
+
+![左移和加减法运算组合.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638366249809-e50e68e1-bb9e-4abb-a7dc-1a7494f66c9f.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ua1d479cf&margin=%5Bobject%20Object%5D&name=%E5%B7%A6%E7%A7%BB%E5%92%8C%E5%8A%A0%E5%87%8F%E6%B3%95%E8%BF%90%E7%AE%97%E7%BB%84%E5%90%88.png&originHeight=962&originWidth=2104&originalType=binary&ratio=1&rotation=0&showTitle=false&size=355203&status=done&style=none&taskId=u5056f07d-ca9d-4023-8447-71078a4f743&title=)
+
+- 组合公式：
+
+![Screen Shot 2021-12-01 at 21.48.03.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638366519003-86868282-e683-4541-a8d2-c186476ee22e.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ub63ea421&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.48.03.png&originHeight=988&originWidth=2560&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2257366&status=done&style=none&taskId=ud238f1b8-bc3f-445c-a5f5-c3fb1ca5ffc&title=)
+### 除法 - 除以2的幂
+整数的除法中，除以2的幂也可以用移位运算来实现，使用的是右移运算。
+整数的除法总是向0舍入。
+​
+
+#### 无符号数
+
+- 逻辑右移
+
+![Screen Shot 2021-12-01 at 21.55.47.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638366960064-fd8a2a94-93e7-4a47-becc-2d5420f49c7f.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uadde584a&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.55.47.png&originHeight=150&originWidth=1870&originalType=binary&ratio=1&rotation=0&showTitle=false&size=233427&status=done&style=none&taskId=ub7d0775d-50e3-49a8-9193-ad0a86c70a7&title=)
+​
+
+#### 有符号数
+
+- 算术右移
+
+![Screen Shot 2021-12-01 at 21.58.13.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638367098392-35c98edb-48a8-45e7-b222-19d43b121629.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=drop&id=u690553a2&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.58.13.png&originHeight=210&originWidth=1952&originalType=binary&ratio=1&rotation=0&showTitle=false&size=321318&status=done&style=none&taskId=uc4190208-80da-4210-a3d5-de9f5348130&title=)
+对于非负数的补码来说，向下舍入是没有问题的；但是对于负数而言，向下舍入并不是向0舍入，我们可以通过在移位前偏置这个值，来修正这种不合适的舍入。
+![Screen Shot 2021-12-01 at 21.55.47.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638367387384-e57c5979-28ec-4dac-abc9-74799e528568.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ub9885807&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.55.47.png&originHeight=150&originWidth=1870&originalType=binary&ratio=1&rotation=0&showTitle=false&size=233427&status=done&style=none&taskId=ua16f8dc8-0dd7-4432-ba56-7a23e93cdf2&title=)
+![Screen Shot 2021-12-01 at 22.03.00.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638367393051-25f2c535-c341-4294-9e25-7ea40d0f0482.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ud306f793&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2022.03.00.png&originHeight=86&originWidth=1652&originalType=binary&ratio=1&rotation=0&showTitle=false&size=137918&status=done&style=none&taskId=u693692cf-9acb-4248-8457-1f38c069e5d&title=)
 
 
 ## 浮点数
 
 
 ## ​
-
