@@ -178,7 +178,7 @@
 
 ![Screen Shot 2021-12-01 at 21.58.13.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638367098392-35c98edb-48a8-45e7-b222-19d43b121629.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=drop&id=u690553a2&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.58.13.png&originHeight=210&originWidth=1952&originalType=binary&ratio=1&rotation=0&showTitle=false&size=321318&status=done&style=none&taskId=uc4190208-80da-4210-a3d5-de9f5348130&title=)
 对于非负数的补码来说，向下舍入是没有问题的；但是对于负数而言，向下舍入并不是向0舍入，我们可以通过在移位前偏置这个值，来修正这种不合适的舍入。
-![Screen Shot 2021-12-01 at 21.55.47.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638367387384-e57c5979-28ec-4dac-abc9-74799e528568.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ub9885807&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2021.55.47.png&originHeight=150&originWidth=1870&originalType=binary&ratio=1&rotation=0&showTitle=false&size=233427&status=done&style=none&taskId=ua16f8dc8-0dd7-4432-ba56-7a23e93cdf2&title=)
+![Screen Shot 2021-12-01 at 22.02.51.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638406615954-c60a37e5-8e57-4d43-bb20-f0716d8dc4ed.png#clientId=u3021479d-a2a9-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u968d13ec&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2022.02.51.png&originHeight=280&originWidth=1940&originalType=binary&ratio=1&rotation=0&showTitle=false&size=552754&status=done&style=none&taskId=u5b94dfd0-8163-4f25-9bdf-7036734100b&title=)
 ![Screen Shot 2021-12-01 at 22.03.00.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638367393051-25f2c535-c341-4294-9e25-7ea40d0f0482.png#clientId=uac42b9d8-2a1a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ud306f793&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-01%20at%2022.03.00.png&originHeight=86&originWidth=1652&originalType=binary&ratio=1&rotation=0&showTitle=false&size=137918&status=done&style=none&taskId=u693692cf-9acb-4248-8457-1f38c069e5d&title=)
 
 
@@ -186,3 +186,4 @@
 
 
 ## ​
+
