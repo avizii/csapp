@@ -183,7 +183,86 @@
 
 
 ## 浮点数
+### 二进制小数
+![带小数点的二进制.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452459395-ca4136ec-f17c-4cc7-814a-23f34b99bec0.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u83f1b580&margin=%5Bobject%20Object%5D&name=%E5%B8%A6%E5%B0%8F%E6%95%B0%E7%82%B9%E7%9A%84%E4%BA%8C%E8%BF%9B%E5%88%B6.png&originHeight=1050&originWidth=2086&originalType=binary&ratio=1&rotation=0&showTitle=false&size=258426&status=done&style=none&taskId=uc9def2e2-c469-4ffb-be69-02ff8ba6ac1&title=)
+### IEEE浮点表示
+![IEEE浮点数表示.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452477129-0f3a1beb-6374-47ca-b968-2c2d727bf035.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u58d8cdde&margin=%5Bobject%20Object%5D&name=IEEE%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA.png&originHeight=948&originWidth=1908&originalType=binary&ratio=1&rotation=0&showTitle=false&size=362296&status=done&style=none&taskId=ueba1c081-7c44-4cc8-afe9-2cce56c6d54&title=)
+![IEEE浮点数表示2.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452489680-75d74b84-2c9c-4d16-9f62-9e09a28ad2d2.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u76ee8bb0&margin=%5Bobject%20Object%5D&name=IEEE%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA2.png&originHeight=554&originWidth=1460&originalType=binary&ratio=1&rotation=0&showTitle=false&size=901468&status=done&style=none&taskId=u129097bb-38fc-42e4-a4a5-0e55abe0e15&title=)
+### IEEE浮点的数值类型
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452633840-6622fe9b-93e9-4a53-9004-3eae2a7a9c54.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=drop&id=u44a4f17d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=944&originWidth=2052&originalType=binary&ratio=1&rotation=0&showTitle=false&size=271296&status=done&style=none&taskId=udc576fd7-bacc-49f5-828b-fbe256bdf3c&title=)
+![Screen Shot 2021-12-02 at 21.48.58.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452960865-5c1eede9-b5bc-43f7-aea7-31061808a848.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ubbeac8d1&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-02%20at%2021.48.58.png&originHeight=1118&originWidth=1476&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1358207&status=done&style=none&taskId=uf52d2307-3e5c-49a9-b260-4a6fae2ffda&title=)
 
 
-## ​
+#### 规格化
 
+- `bias = 2^(k-1) - 1`
+- `E = exp - bias`
+- `M = 1 + f`
+
+![规格化1.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452656107-6e79ba1e-0742-4193-a65b-7d638581dc6e.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u52e27137&margin=%5Bobject%20Object%5D&name=%E8%A7%84%E6%A0%BC%E5%8C%961.png&originHeight=884&originWidth=2138&originalType=binary&ratio=1&rotation=0&showTitle=false&size=486418&status=done&style=none&taskId=ue2b9c137-7495-41dd-b9f3-15f53422854&title=)
+![规格化2.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452707553-c85e5ede-6206-4747-b7d4-d465560e6552.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uf107aa04&margin=%5Bobject%20Object%5D&name=%E8%A7%84%E6%A0%BC%E5%8C%962.png&originHeight=952&originWidth=2002&originalType=binary&ratio=1&rotation=0&showTitle=false&size=405759&status=done&style=none&taskId=u9ef8afe5-fde7-45c1-840f-a8dab26c2d0&title=)
+​
+
+实例：
+![特殊值实例.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638453050887-0e2c2e8b-1e56-46e1-827f-3166e9d927ac.png#clientId=uddd52223-08b0-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=udf170f4d&margin=%5Bobject%20Object%5D&name=%E7%89%B9%E6%AE%8A%E5%80%BC%E5%AE%9E%E4%BE%8B.png&originHeight=962&originWidth=2086&originalType=binary&ratio=1&rotation=0&showTitle=false&size=512975&status=done&style=none&taskId=uca8f039d-2833-4bcd-aea3-c8ece201024&title=)
+#### 
+#### 非规格化
+
+- `E = 1 - bias`
+- `M = f`
+
+![非规格化.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452854740-17ff0f67-261d-48cd-87af-299242fb414a.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u568c9e76&margin=%5Bobject%20Object%5D&name=%E9%9D%9E%E8%A7%84%E6%A0%BC%E5%8C%96.png&originHeight=878&originWidth=2076&originalType=binary&ratio=1&rotation=0&showTitle=false&size=407020&status=done&style=none&taskId=u15848e2f-8399-4422-a5e0-ba0148b6c07&title=)
+
+
+实例：
+![非规格化实例.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452862069-cdf6573d-7cd5-44fe-8c79-95e7ade91cb5.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u1cb9cd2a&margin=%5Bobject%20Object%5D&name=%E9%9D%9E%E8%A7%84%E6%A0%BC%E5%8C%96%E5%AE%9E%E4%BE%8B.png&originHeight=980&originWidth=2112&originalType=binary&ratio=1&rotation=0&showTitle=false&size=665887&status=done&style=none&taskId=u73d2c605-12b8-4877-b21b-fbe85afb3a4&title=)
+#### 特殊值
+![特殊值.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638452903015-df9184fe-9713-4518-b118-12cdf1033159.png#clientId=u58308c6c-3f42-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u77d933e4&margin=%5Bobject%20Object%5D&name=%E7%89%B9%E6%AE%8A%E5%80%BC.png&originHeight=962&originWidth=2058&originalType=binary&ratio=1&rotation=0&showTitle=false&size=453812&status=done&style=none&taskId=u3e900862-5a5a-4ec9-be3d-bdf3f21e99c&title=)
+
+
+实例：
+![规格化实例.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638453037623-38dbc796-c23a-41d1-ac9c-d9154d0b8b48.png#clientId=uddd52223-08b0-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u3eb41b63&margin=%5Bobject%20Object%5D&name=%E8%A7%84%E6%A0%BC%E5%8C%96%E5%AE%9E%E4%BE%8B.png&originHeight=970&originWidth=2096&originalType=binary&ratio=1&rotation=0&showTitle=false&size=561676&status=done&style=none&taskId=u6288aa15-69df-4d1b-8e2e-054565c0545&title=)
+
+
+### Int 转 Float 实例
+![Screen Shot 2021-12-02 at 21.52.36.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638454975288-3b9c72ba-da2c-4557-8c80-76217a658140.png#clientId=ucdd6b408-d80c-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uc56ee5d0&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-02%20at%2021.52.36.png&originHeight=842&originWidth=1864&originalType=binary&ratio=1&rotation=0&showTitle=false&size=459457&status=done&style=none&taskId=ud839519f-91b7-4344-9d93-09b28b824bb&title=)
+
+
+### 舍入
+对于值x，可能无法用浮点形式来精确的表示，因此我们希望可以找到“最接近的值 x’ 来代替x，这就是舍入操作的任务。
+
+
+- 向上舍入：朝大的方向舍入
+- 向下舍入：朝小的方向舍入
+- 向0舍入：整数向下舍入，负数向上舍入
+- 向偶数舍入：向最近的值舍入
+
+![Screen Shot 2021-12-02 at 21.54.09.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638454999677-391c0a13-5422-4ee7-bc82-8f626491f18b.png#clientId=ucdd6b408-d80c-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u19eb5f57&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-02%20at%2021.54.09.png&originHeight=922&originWidth=1514&originalType=binary&ratio=1&rotation=0&showTitle=false&size=365328&status=done&style=none&taskId=udd79b407-374d-4056-bc4b-37ca4bcc282&title=)
+#### 向偶数舍入
+舍入后的最低有效数字为偶数，若是偶数则保留，若为奇数则进位  ==>  四舍六入五成双
+​
+
+对于二进制来说，最低有效数字为0则表示偶数，为1表示奇数。
+​
+
+二进制小数表示在两个可能的结果正中间的值的格式如下：
+![Screen Shot 2021-12-02 at 22.17.37.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638455303987-021993a2-5749-4baf-a533-1ae067f2b08d.png#clientId=ucdd6b408-d80c-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u906823a3&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-02%20at%2022.17.37.png&originHeight=550&originWidth=1618&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1008735&status=done&style=none&taskId=ubc548dbc-ff8c-4dd5-a145-bd0d6077e6e&title=)
+实例：
+![Screen Shot 2021-12-02 at 22.01.53.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638455008773-e6ab0332-b877-4352-b532-338da07cd8b0.png#clientId=ucdd6b408-d80c-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ua247dcb5&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-02%20at%2022.01.53.png&originHeight=952&originWidth=1834&originalType=binary&ratio=1&rotation=0&showTitle=false&size=472897&status=done&style=none&taskId=uffad732d-f765-40f3-aca4-93e07352ac3&title=)
+
+
+### IEEE浮点的运算规则
+
+- 不满足加法结合律
+- 不满足乘法结合律
+- 乘法在加法上不满足分配律
+
+![Screen Shot 2021-12-02 at 22.31.51.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1638455527268-7a277e0c-40e3-4e18-afc3-e926fba87442.png#clientId=ucdd6b408-d80c-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uf2856784&margin=%5Bobject%20Object%5D&name=Screen%20Shot%202021-12-02%20at%2022.31.51.png&originHeight=866&originWidth=1868&originalType=binary&ratio=1&rotation=0&showTitle=false&size=525031&status=done&style=none&taskId=uec45780d-da83-4390-ac1b-fad2d8310eb&title=)
+
+
+### C语言整数与浮点数的强制转换
+
+- int -> float: 不会溢出，可舍入
+- int / float -> double：不会溢出，不会舍入
+- double -> float：可溢出，可舍入
+- float / double -> int：可溢出，可舍入
