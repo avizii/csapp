@@ -1,0 +1,118 @@
+======================================================
+                       学习流程
+======================================================
+a) 1遍九曲阑干动画 - 0.3d
+b) 1遍cmu视频 - 0.7d
+
+c) 1遍课本 - 1d
+
+d) 1遍动画  - 0.5d
+e) 笔记输出 - 1.5d
+
+======================================================
+
+
+======================================================
+           part1  basic
+======================================================
+1.动画
+    1.程序的机器级表示
+    2.寄存器与数据传送指令
+    3.栈与数据传送指令
+    4.算术和逻辑运算指令
+
+2.cmu视频
+    lecture5 basic
+        History of Intel processors and architectures
+        C, assembly, machine code
+        Assembly Basics: Registers, operands, move
+        Arithmetic & logical operations
+
+3.课本
+    1.历史观点
+    2.程序编码
+    3.数据格式
+    4.访问信息
+    5.算术和逻辑操作
+
+
+======================================================
+           part2  control
+======================================================
+1.动画
+    5.指令与条件码
+    6.跳转指令与循环
+
+2.cmu
+    lecture6 control
+        Control: Condition codes
+        Conditional branches
+        Loops
+        Switch Statements
+
+3.课本
+    6.控制
+
+
+======================================================
+           part3  procedures
+======================================================
+1.动画
+    7.过程-函数调用
+
+2.cmu
+    lecture7 procedures
+        Procedures
+            Stack Structure
+            Calling Conventions
+            Passing control
+            Passing data
+            Managing local data
+            Illustration of Recursion
+
+3.课本
+    7.过程
+
+
+======================================================
+           part4  Data
+======================================================
+1.动画
+    8.数组的分配和访问
+    9.结构体与联合体
+
+2.cmu
+    lecture8 Data
+        Arrays
+            One-dimensional
+            Multi-dimensional (nested)
+            Multi-level
+        Structures
+            Allocation
+            Access
+            Alignment
+        Floating Point
+
+3.课本
+    8.数组分配和访问
+    9.异质的数据结构
+    11.浮点代码
+
+
+======================================================
+           part5  Advanced Topics
+======================================================
+1.动画
+    10.缓冲区溢出
+
+2.cmu
+    lecture9 Advanced Topics
+        Memory Layout
+        Buffer Overflow
+            Vulnerability
+            Protection
+        Unions
+
+3.课本
+    10.在机器级程序中将控制和数据结合起来
+
