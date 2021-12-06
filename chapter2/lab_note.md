@@ -21,11 +21,13 @@ cd /root/datalab-handout
 
 #### 思路1
 异或运算的定义如下：
+
 ![](https://cdn.nlark.com/yuque/__latex/9c3b789b1867181768a448df665f1368.svg#card=math&code=A%20%5Coplus%20B%20%3D%20%28%5Cneg%20A%20%5Cwedge%20B%29%20%5Cvee%20%28A%20%5Cwedge%20%5Cneg%20B%29&id=rDCvp)
 
-
 德摩根定律的定义如下：
+
 ![](https://cdn.nlark.com/yuque/__latex/911c651169e8226366bfe522bfc70b4f.svg#card=math&code=%5Cneg%28P%20%5Cwedge%20Q%29%20%3D%20%28%5Cneg%20P%29%20%5Cvee%20%28%5Cneg%20Q%29&id=uRhDS)
+
 ![](https://cdn.nlark.com/yuque/__latex/d4c57749eb7c130b9ecfe0c5c450c08e.svg#card=math&code=%0A%5Cneg%28P%20%5Cvee%20Q%29%20%3D%20%28%5Cneg%20P%29%20%5Cwedge%20%28%5Cneg%20Q%29&id=pcmXk)
 
 
@@ -136,9 +138,8 @@ int isTmax(int x) {
 
 > **💡 小技巧**
 > 1. 当遇到表达式位运算需要返回 true / false 时，由于 `!` 运算不为 0 就是 true 的特性，优先考虑有什么特殊表达式的运算结果会是 0，再取 `!` 运算得到 true，模板如下：`return !(expression)`。
->
-
-
+> 
+> 
 > 2. 判断两个数值是否相等时，关系运算符 `a == b` 等价于 `!(a ^ b)`。
 
 
@@ -342,13 +343,11 @@ int conditional(int x, int y, int z) {
 
 > **💡 小技巧**
 > 1. 如何判断一个整数是正数还是负数呢？
->
-对于 32 位的 int 型整数，右移 31 位，若结果为 0，则为正数；若结果为 -1，则为负数
->
-
+> 对于 32 位的 int 型整数，右移 31 位，若结果为 0，则为正数；若结果为 -1，则为负数。
+> 
+> 
 > 2. 如何判断两个整数的符号位是否相同呢？
->
-将两个整数分别右移 31 位，再进行异或运算，若结果为 0，则符号位相同；若结果为 1，则符号位不同
+> 将两个整数分别右移 31 位，再进行异或运算，若结果为 0，则符号位相同；若结果为 1，则符号位不同
 
 
 
