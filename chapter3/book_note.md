@@ -325,5 +325,81 @@ case 中缺失 break 语句的情况。
 ![截屏2021-12-17 20.55.26.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1639745735241-80c49765-e302-4df3-81df-f2ce7d2d4747.png#clientId=uca56052a-acab-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u44c3c5b2&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-17%2020.55.26.png&originHeight=1178&originWidth=1092&originalType=binary&ratio=1&rotation=0&showTitle=false&size=297686&status=done&style=none&taskId=u6d962267-3da5-46cd-8f06-55a64cb2fe7&title=)
 
 
+## 过程
+过程是软件中一种很重要的抽象。它提供了一种封装代码的方式，用一组指定的参数和一个可选的返回值实现了某种功能。
+​
+
+不同编程语言中，过程的形式多样：函数（function）、方法（method）、子例程（subroutine）等。
+​
+
+### 运行时栈
+当过程需要的存储空间超出寄存器能够存放的大小时，就会在栈上分配空间，这部分成为过程的栈帧(stack frame)。
+​
+
+将栈指针 `%rsp` 减小一个适当的量可以为没有指定初始值的数据在栈上分配空间，类似的，可以通过增加栈指针来释放空间。
+​
+
+当过程 P 调用过程 Q 时，会把返回地址压入栈中，指明当 Q 返回时，要从 P 程序的那个位置继续执行。
+​
+
+我们把这个返回地址当做 P 的栈帧的一部分，因为它存放的是与 P 相关的状态。
+​
+
+Q 的代码会扩展当前栈的边界，分配它的栈帧所需的空间，在这个空间中，它可以 保存寄存器的值、分配局部变量空间、为他调用的过程设置参数。
+​
+
+大多数过程的栈帧都是定长的，在过程的开始就分配好了。
+![截屏2021-12-23 20.10.14.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640261425100-d92c1f32-4f22-40b8-968e-6406261821bd.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u426d5821&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.10.14.png&originHeight=1116&originWidth=684&originalType=binary&ratio=1&rotation=0&showTitle=false&size=641817&status=done&style=none&taskId=u49f84ee3-6d26-4876-880b-ad80c6bf37e&title=)
+
+
+### 传递控制
+![截屏2021-12-23 20.18.03.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640261922817-e624875b-0e3b-47f2-bb39-16dcfe4d8835.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u9c53e210&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.18.03.png&originHeight=916&originWidth=1442&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1524440&status=done&style=none&taskId=ue8da7ad0-3990-4533-9937-40784f63d40&title=)
+![截屏2021-12-23 20.21.56.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640262128679-ebf699cf-d4c3-4e07-b7bf-636df9104eae.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u8db5ee39&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.21.56.png&originHeight=1234&originWidth=1476&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1219058&status=done&style=none&taskId=udb17e3f2-5dc1-4ebb-88f3-3072746bda5&title=)
+
+
+### 传递数据
+![截屏2021-12-23 20.24.23.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640262285578-21e8a3a2-56a4-4d5c-9f08-a2f7190149f4.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u60178dbb&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.24.23.png&originHeight=808&originWidth=1430&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1286873&status=done&style=none&taskId=u7671afe5-e1cb-4d6f-bb3d-644b22e4693&title=)
+![截屏2021-12-23 20.24.33.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640262292242-09a15c9f-8ec3-4221-b1aa-dd987d2e4e4c.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u44bf79d8&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.24.33.png&originHeight=130&originWidth=1394&originalType=binary&ratio=1&rotation=0&showTitle=false&size=160674&status=done&style=none&taskId=ub378c624-c157-4f18-98f8-3b0794abaa6&title=)
+![截屏2021-12-23 20.27.54.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640262484320-db8b14c2-3ae0-4708-b815-9403b27ff775.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u1a960831&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.27.54.png&originHeight=768&originWidth=1462&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1016027&status=done&style=none&taskId=ud3e0c518-ae2a-46c2-9bec-08c0e518fea&title=)
+### 分配和释放内存
+#### 栈上的局部存储
+![截屏2021-12-23 20.29.29.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640262578445-84053069-6005-4281-9732-27909dd9e8ee.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u0c387a90&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.29.29.png&originHeight=348&originWidth=1372&originalType=binary&ratio=1&rotation=0&showTitle=false&size=542832&status=done&style=none&taskId=u7e1bc000-c871-47f7-aeb4-d3de6b61ec7&title=)
+![截屏2021-12-23 20.37.25.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640263060183-4a4fa6fc-a767-46ba-b8fd-4e14cdf8a1e0.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u30b24664&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.37.25.png&originHeight=1394&originWidth=2840&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2776565&status=done&style=none&taskId=u8de59ea5-e3a3-4940-8142-34fffe18415&title=)
+#### 寄存器的局部存储
+当一个过程（调用者）调用另一个过程（被调用者）时，要保证被调用者不会覆盖掉调用者稍后会使用的寄存器值。
+​
+
+##### （1）被调用者保存寄存器
+寄存器 `%rbx`、`%rbp` 和 `%r12 ~ %r15` 被划分为被调用者保存寄存器。
+​
+
+当过程 P 调用过程 Q 时，Q 必须保存这些寄存器的值，保证它们的值在 Q 返回到 P 时与 Q 被调用时是一样的。
+​
+
+过程 Q 保存一个寄存器的值不变有两种方式：
+
+1. 不去改变它
+1. 把原始值压入栈中，改变寄存器的值，然后在返回前从栈中弹出旧值。
+
+​
+
+##### （2）调用者保存寄存器
+除了 被调用者保存寄存器 和 栈指针 `%rsp`，其他的寄存器都分类为调用者保存寄存器。
+​
+
+过程 P 在某个此类寄存器中有局部数据，然后调用过程 Q，因为 Q 可以随意修改这个寄存器，所以在调用之前，首先保存好这类寄存器中的数据。
+![截屏2021-12-23 20.50.07.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640263826036-b04d2974-7234-4800-84e4-698d55751ad7.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u212f22e8&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.50.07.png&originHeight=1048&originWidth=1046&originalType=binary&ratio=1&rotation=0&showTitle=false&size=841391&status=done&style=none&taskId=ueea50204-5874-405e-a30c-ea6f468baed&title=)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
