@@ -391,6 +391,28 @@ Q 的代码会扩展当前栈的边界，分配它的栈帧所需的空间，在
 ![截屏2021-12-23 20.50.07.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640263826036-b04d2974-7234-4800-84e4-698d55751ad7.png#clientId=u67fc2ff7-ad96-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u212f22e8&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-23%2020.50.07.png&originHeight=1048&originWidth=1046&originalType=binary&ratio=1&rotation=0&showTitle=false&size=841391&status=done&style=none&taskId=ueea50204-5874-405e-a30c-ea6f468baed&title=)
 
 
+## 数据
+### 数组
+#### 一维数组与指针运算
+![截屏2021-12-27 21.56.35.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640613516621-b40daf8a-68f8-4c5b-b81e-7d7348ea01a6.png#clientId=u441f0f68-5e3a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ubb7c2ad4&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-27%2021.56.35.png&originHeight=1046&originWidth=1520&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1290314&status=done&style=none&taskId=ub32dd1be-b7a1-4d1b-bdd8-575dcde1199&title=)
+![截屏2021-12-27 21.55.46.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640613525160-5fd9e13d-a6d5-4a74-92cd-546c9ccb0b67.png#clientId=u441f0f68-5e3a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u205fccf6&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-27%2021.55.46.png&originHeight=1012&originWidth=1776&originalType=binary&ratio=1&rotation=0&showTitle=false&size=340559&status=done&style=none&taskId=u285f67d6-1d67-4191-8844-1e5d7f86db6&title=)
+![截屏2021-12-27 21.57.21.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640613533788-099434ce-52ac-4939-9a43-8fc279ea377f.png#clientId=u441f0f68-5e3a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u69554a62&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-27%2021.57.21.png&originHeight=844&originWidth=1508&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1437085&status=done&style=none&taskId=u9cdbbb1c-a85a-4c3a-b71d-9d84969a38e&title=)
+
+
+#### 嵌套数组(二维数组)
+![截屏2021-12-27 22.00.08.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640613619620-b36afb42-4390-43a0-a9c5-f29e74c61356.png#clientId=u441f0f68-5e3a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u1156900f&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-27%2022.00.08.png&originHeight=1188&originWidth=1532&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1727199&status=done&style=none&taskId=u72cc2d93-4fc0-4f17-b12d-9adb1e8c414&title=)
+![截屏2021-12-27 21.43.57.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640613569938-be29940e-200d-4c0d-9d6d-ddc81f1ceba2.png#clientId=u441f0f68-5e3a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=uaabdf168&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-27%2021.43.57.png&originHeight=896&originWidth=2062&originalType=binary&ratio=1&rotation=0&showTitle=false&size=486201&status=done&style=none&taskId=ua611ab6e-4854-4ebb-810c-72ff4412dcc&title=)
+![截屏2021-12-27 21.44.53.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640613578120-16a4bdf9-4822-4c0f-b49f-39756944f0f8.png#clientId=u441f0f68-5e3a-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u13cdb222&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-27%2021.44.53.png&originHeight=950&originWidth=1878&originalType=binary&ratio=1&rotation=0&showTitle=false&size=569529&status=done&style=none&taskId=u0295e7f4-419e-4b95-8807-9f29467697e&title=)
+
+
+### 结构体
+
+
+
+
+### 联合体
+
+
 
 
 
