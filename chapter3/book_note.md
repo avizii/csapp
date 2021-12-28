@@ -406,15 +406,42 @@ Q 的代码会扩展当前栈的边界，分配它的栈帧所需的空间，在
 
 
 ### 结构体
-
-
+![截屏2021-12-28 23.37.39.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640705908154-8284c6d9-0e51-47a0-ae4b-6709f86e18a2.png#clientId=ucca456f7-e8ba-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u26582a6c&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-28%2023.37.39.png&originHeight=278&originWidth=1476&originalType=binary&ratio=1&rotation=0&showTitle=false&size=495022&status=done&style=none&taskId=u1a9a9806-66b9-4704-b96e-88fd0d55831&title=)
+![截屏2021-12-28 23.37.52.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640705914470-a8ec99bf-82c3-419a-9454-32a1fe6e3807.png#clientId=ucca456f7-e8ba-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u2a837ca0&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-28%2023.37.52.png&originHeight=496&originWidth=1474&originalType=binary&ratio=1&rotation=0&showTitle=false&size=304913&status=done&style=none&taskId=uc4b2f094-1a7b-42b4-945a-1c39e575a28&title=)
 
 
 ### 联合体
+用不同的字段来引用相同的内存块。
+​
+
+一个联合体的总大小等于他最大字段的大小。
+​
+
+应用场景：
+
+1. 事先知道对一个数据结构中的两个不同字段的使用时互斥的，那个将这两个字段声明为联合体的一部分，而不是结构体的一部分，会减少分配空间的总量。
+1. 访问不同数据类型的位模式
 
 
 
+### 内存对齐
+许多计算机系统对基本数据类型的合法地址做出了一些限制，要求某种类型对象的地址必须是某个值K（通常是1、2、4、8）的倍数，这种对齐限制简化了形成处理器和内存系统之间接口的硬件设计。
+​
 
+无论数据是否对齐，x86-64硬件都能正确工作，不过建议要对齐数据以提高内存系统的性能。
+​
+
+##### 对齐原则：
+
+1. 任何K字节的基本对象的地址必须是K的倍数
+1. 编译器必须保证任何结构类型的指针都满足它的对齐要求
+1. 编译器结构的末尾可能需要一些填充，这样结构数组中的每个元素都会满足它的对齐要求
+
+
+
+![截屏2021-12-28 23.43.21.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640706232615-20ac8d13-78d3-4ef3-988a-2248498eea51.png#clientId=ucca456f7-e8ba-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u98053cf6&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-28%2023.43.21.png&originHeight=310&originWidth=1456&originalType=binary&ratio=1&rotation=0&showTitle=false&size=209090&status=done&style=none&taskId=u9adb2767-cdea-4728-bd30-a3c8fc0da19&title=)
+![截屏2021-12-28 23.12.21.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640706700392-97d30bd6-77de-411b-accc-8e0fe0302598.png#clientId=u4ba5f59d-0a76-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u640ea582&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-28%2023.12.21.png&originHeight=1734&originWidth=3112&originalType=binary&ratio=1&rotation=0&showTitle=false&size=1110999&status=done&style=none&taskId=u7fa0e4f6-4e2b-4cc4-8c53-f3d015bf0d1&title=)
+![截屏2021-12-28 23.20.11.png](https://cdn.nlark.com/yuque/0/2021/png/1488287/1640706708475-af25c9aa-64c1-4c4e-875e-8f7b176a99d8.png#clientId=u4ba5f59d-0a76-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u674d4e73&margin=%5Bobject%20Object%5D&name=%E6%88%AA%E5%B1%8F2021-12-28%2023.20.11.png&originHeight=1218&originWidth=3222&originalType=binary&ratio=1&rotation=0&showTitle=false&size=947416&status=done&style=none&taskId=uf7551469-9c01-460f-a57f-e7244fcc1ca&title=)
 
 
 
